@@ -20,6 +20,14 @@ If building from a git checkout, the `autotools` (`autoconf`, `automake`, `libto
 
     ./autogen.sh && ./configure && make && make install
 
+## Building (with TI C6000 Code Generation Tools for KFLOP)
+
+From within the `protobuf-c` directory:
+- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include/ --gcc protobuf-c.c`
+- This will produce a `protobuf-c.obj` file
+- Run `ar6x rs libprotobuf-c.lib protobuf-c.obj`
+- This will produce the `libprotobuf-c.lib` file
+
 ## Test
 
 If you want to execute test cases individually, please run the following command after running `./configure` once:
