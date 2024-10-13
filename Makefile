@@ -15,8 +15,8 @@ PROTOBUF_LIB = $(LIB_DIR)/$(LIB)
 
 OBJECTS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.obj,$(shell find $(SRC_DIR) -type f -name "*.c"))
 
-CC := $(TI_BIN_DIR)/cl6x
-AR := $(TI_BIN_DIR)/ar6x
+CC ?= $(TI_BIN_DIR)/cl6x
+AR ?= $(TI_BIN_DIR)/ar6x
 
 .PHONY: all clean
 
