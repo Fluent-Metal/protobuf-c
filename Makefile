@@ -23,6 +23,8 @@ AR ?= $(TI_BIN_DIR)/ar6x
 all:
 	@make --silent -j"$(shell nproc)" $(PROTOBUF_LIB)
 
+objects: $(OBJECTS)
+
 clean:
 	@rm -rf "$(BUILD_DIR)" "$(PROTOBUF_LIB)"
 
