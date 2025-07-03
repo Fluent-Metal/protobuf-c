@@ -40,3 +40,6 @@ t/version/version
 *.pb.cc
 *.pb.h
 *.lib
+
+# Build directory
+build/
